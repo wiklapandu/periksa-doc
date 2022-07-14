@@ -1,16 +1,74 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul.navbar-nav {
+  @apply md:flex mx-auto text-base md:order-none flex order-last;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+li.nav-item {
+  @apply mx-5;
 }
 
-* {
-  box-sizing: border-box;
+ul.navbar-group {
+  @apply text-gray-400;
+}
+ul.navbar-group li.nav-link {
+  @apply font-normal text-lg mb-1;
+}
+
+.nav-item .nav-link {
+  @apply font-normal;
+}
+.nav-item .nav-link.active {
+  @apply font-medium;
+  color: #106ac6;
+}
+.btn {
+  @apply py-3 px-6 rounded-lg transition-all duration-300 text-black text-base text-center;
+}
+
+.btn:hover {
+  @apply scale-95 ease-in;
+}
+.btn:active {
+  @apply scale-90 ease-in;
+}
+
+.btn.btn-primary {
+  @apply text-white;
+  background-color: hsl(210, 85%, 42%);
+}
+
+.btn.btn-primary:hover {
+  @apply text-white;
+  background-color: hsl(210, 85%, 33%);
+}
+
+.btn.btn-outline-primary-alt {
+  color: hsl(210, 84%, 50%);
+  border: 1px solid hsl(210, 84%, 50%);
+}
+
+.btn.btn-outline-primary-alt:hover {
+  @apply text-white;
+  background: hsl(210, 84%, 50%);
+}
+
+.btn.btn-primary-alt {
+  @apply text-white;
+  background-color: hsl(210, 84%, 50%);
+}
+
+.btn.btn-primary-alt:hover {
+  @apply text-white;
+  background-color: hsl(210, 84%, 33%);
+}
+a.anim1 i {
+  @apply ease-in-out transition-transform;
+  transform: translateX(0px);
+}
+
+a.anim1:hover i {
+  transform: translateX(5px);
 }
