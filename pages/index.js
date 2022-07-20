@@ -60,7 +60,7 @@ export default function Home() {
               </li>
             </ul>
             <div className="flex">
-              <Link href="/">
+              <Link href="/login">
                 <a className="btn m-2">Login</a>
               </Link>
               <Link href="/">
@@ -97,7 +97,7 @@ export default function Home() {
                   </a>
                 </Link>
               </div>
-              <div className="absolute -right-20 -top-20 lg:inline hidden">
+              <div className="absolute -right-20 -top-20 lg:inline hidden animate-lift">
                 <Image src={float1} alt="drug icon" />
               </div>
             </div>
